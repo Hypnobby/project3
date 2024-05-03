@@ -1,0 +1,41 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "This will be the api for my project data.",
+  "main": "app.js",
+  "scripts": {
+    "start": "npm run apidoc & node app.js",
+    "apidoc": "apidoc -i routes/ -o public/apidoc",
+    "test": "SET NODE_ENV=test& mocha test/**/*.js"
+  },
+  "apidoc": {
+    "name": "Node Project API - Documentation ",
+    "template": {
+      "forceLanguage": "en"
+    }
+  },
+  "author": "Ryder Kos",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "consign": "^0.1.6",
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.10",
+    "express": "^4.18.2",
+    "jwt-simple": "^0.5.6",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "sequelize": "^6.37.1",
+    "sqlite3": "^5.1.7",
+    "winston": "^3.13.0"
+  },
+  "devDependencies": {
+    "apidoc": "^1.2.0",
+    "chai": "^4.3.7",
+    "mocha": "^10.4.0",
+    "supertest": "^6.3.4"
+  }
+}
